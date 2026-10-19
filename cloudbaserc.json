@@ -41,6 +41,21 @@
       "runtime": "Nodejs18.15",
       "handler": "index.main",
       "installDependency": true
+    },
+    {
+      "name": "shopee-session-keepalive",
+      "timeout": 60,
+      "memorySize": 256,
+      "runtime": "Nodejs18.15",
+      "handler": "index.main",
+      "installDependency": true,
+      "triggers": [
+        {
+          "name": "session-keepalive-daily",
+          "type": "timer",
+          "config": "0 0 23 * * * *"
+        }
+      ]
     }
   ]
 }
