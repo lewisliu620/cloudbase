@@ -64,10 +64,12 @@ function hitAny(text, words) {
 
 function uniqueWordCount(text) {
   const t = String(text || '');
+  // 英文/数字词按空格与边界分词
   const en = (t.match(/[a-z0-9]+/gi) || []).map((x) => x.toLowerCase());
-  const th = (t.match(/[\u0E00-\u0E7F]+/g) || []).join('');
   const set = new Set(en);
-  if (th) set.add('th:' + th);
+  // 泰文按空白分隔的连续泰文段逐个计词（泰文 Listing 标准写法用空格分词）
+  const thSegs = (t.match(/[\u0E00-\u0E7F]+/g) || []).filter((s) => s.trim());
+  thSegs.forEach((seg) => set.add('th:' + seg.trim()));
   return set.size;
 }
 
