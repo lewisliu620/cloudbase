@@ -26,6 +26,9 @@
       "runtime": "Nodejs18.15",
       "handler": "index.main",
       "installDependency": true,
+      "envVariables": {
+        "CDN_DOMAIN": "636c-clouddevyuwa-d0gu7horo48c7d182-1301101486.tcb.qcloud.la"
+      },
       "triggers": [
         {
           "name": "listing-assets-cleanup",
