@@ -1,0 +1,11 @@
+{
+  "name": "pl-listing-template",
+  "version": "1.0.0",
+  "description": "CNSC batch upload template generator",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.6.0"
+  }
+}

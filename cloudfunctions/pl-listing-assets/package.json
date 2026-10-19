@@ -1,0 +1,11 @@
+{
+  "name": "pl-listing-assets",
+  "version": "1.0.0",
+  "description": "Listing assets lifecycle: register/list/cleanup with 14-day TTL",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.6.0"
+  }
+}

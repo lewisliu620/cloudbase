@@ -1,0 +1,11 @@
+{
+  "name": "pl-listing-check",
+  "version": "1.0.0",
+  "description": "Shopee listing compliance pre-check (knowledge base rules)",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.6.0"
+  }
+}

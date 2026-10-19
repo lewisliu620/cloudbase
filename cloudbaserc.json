@@ -1,0 +1,46 @@
+{
+  "envId": "clouddevyuwa-d0gu7horo48c7d182",
+  "region": "ap-shanghai",
+  "functionRoot": "./cloudfunctions",
+  "functions": [
+    {
+      "name": "logservice-init",
+      "timeout": 30,
+      "memorySize": 256,
+      "runtime": "Nodejs18.15",
+      "handler": "index.main",
+      "installDependency": true
+    },
+    {
+      "name": "pl-listing-check",
+      "timeout": 30,
+      "memorySize": 256,
+      "runtime": "Nodejs18.15",
+      "handler": "index.main",
+      "installDependency": true
+    },
+    {
+      "name": "pl-listing-assets",
+      "timeout": 60,
+      "memorySize": 256,
+      "runtime": "Nodejs18.15",
+      "handler": "index.main",
+      "installDependency": true,
+      "triggers": [
+        {
+          "name": "listing-assets-cleanup",
+          "type": "timer",
+          "config": "0 0 3 * * * *"
+        }
+      ]
+    },
+    {
+      "name": "pl-listing-template",
+      "timeout": 30,
+      "memorySize": 256,
+      "runtime": "Nodejs18.15",
+      "handler": "index.main",
+      "installDependency": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "logservice-init",
+  "version": "1.0.0",
+  "description": "One-shot CLS log service init (idempotent)",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.6.0"
+  }
+}
